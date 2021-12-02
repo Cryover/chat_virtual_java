@@ -24,7 +24,7 @@ public class Cliente extends JFrame implements ActionListener, KeyListener {
     private JLabel lblMsg;
     private JPanel pnlContent;
     private Socket socket;
-    private OutputStream ou ;
+    private OutputStream ou;
     private Writer ouw;
     private BufferedWriter bfw;
     private JTextField txtIP;
@@ -71,7 +71,7 @@ public class Cliente extends JFrame implements ActionListener, KeyListener {
          setContentPane(pnlContent);
          setLocationRelativeTo(null);
          setResizable(false);
-         setSize(250,300);
+         setSize(250,320);
          setVisible(true);
          setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -102,7 +102,7 @@ public void conectar() throws IOException{
       texto.append("Desconectado \r\n");
     }else{
       bfw.write(msg+"\r\n");
-      texto.append( txtNome.getText() + " diz -> " +         txtMsg.getText()+"\r\n");
+      texto.append( txtNome.getText() + ": " + txtMsg.getText()+"\r\n");
     }
      bfw.flush();
      txtMsg.setText("");

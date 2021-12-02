@@ -104,7 +104,7 @@ public void sendToAll(BufferedWriter bwSaida, String msg) throws  IOException
          Socket con = server.accept();
          System.out.println("Cliente conectado...");
          Thread t = new Servidor(con);
-          t.start();
+         t.start();
       }
   
     }catch (Exception e) {
