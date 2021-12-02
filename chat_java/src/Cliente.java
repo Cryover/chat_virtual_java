@@ -32,11 +32,14 @@ public class Cliente extends JFrame implements ActionListener, KeyListener {
     private JTextField txtNome;
 
     public Cliente() throws IOException{
-        JLabel lblMessage = new JLabel("Verificar!");
+        JLabel lblMessage = new JLabel("Digite as informações necessárias");
+        JLabel lblIP = new JLabel("IP:");
         txtIP = new JTextField("127.0.0.1");
+        JLabel lblPorta = new JLabel("Porta:");
         txtPorta = new JTextField("12345");
+        JLabel lblCliente = new JLabel("Nome:");
         txtNome = new JTextField("Cliente");
-        Object[] texts = {lblMessage, txtIP, txtPorta, txtNome };
+        Object[] texts = {lblMessage, lblIP, txtIP, lblPorta, txtPorta, lblCliente, txtNome };
         JOptionPane.showMessageDialog(null, texts);
          pnlContent = new JPanel();
          texto = new JTextArea(10,20);

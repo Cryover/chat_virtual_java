@@ -91,14 +91,13 @@ public void sendToAll(BufferedWriter bwSaida, String msg) throws  IOException
 
     try{
       //Cria os objetos necessário para instânciar o servidor
-      JLabel lblMessage = new JLabel("Porta do Servidor:");
+      JLabel lblMessage = new JLabel("Digite a porta do Servidor:");
       JTextField txtPorta = new JTextField("12345");
       Object[] texts = {lblMessage, txtPorta };
       JOptionPane.showMessageDialog(null, texts);
       server = new ServerSocket(Integer.parseInt(txtPorta.getText()));
       clientes = new ArrayList<BufferedWriter>();
-      JOptionPane.showMessageDialog(null,"Servidor ativo na porta: "+
-      txtPorta.getText());
+      JOptionPane.showMessageDialog(null,"Servidor ativo na porta: "+txtPorta.getText());
   
        while(true){
          System.out.println("Aguardando conexão...");
