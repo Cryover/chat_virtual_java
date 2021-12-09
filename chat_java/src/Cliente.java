@@ -77,7 +77,7 @@ public class Cliente extends JFrame implements ActionListener, KeyListener {
     }
 
     /***
-  * Método usado para conectar no server socket, retorna IO Exception caso dê algum erro.
+  * Método usado para conectar no server socket, retorna IO Exception caso dê algum erro de conexão.
   * @throws IOException
   */
 public void conectar() throws IOException{
@@ -177,6 +177,7 @@ public void keyReleased(KeyEvent arg0) {
 public void keyTyped(KeyEvent arg0) {
 }
 
+// Método run
 public static void main(String []args) throws IOException{
 
     Cliente app = new Cliente();
